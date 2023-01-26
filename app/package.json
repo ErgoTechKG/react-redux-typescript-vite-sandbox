@@ -20,9 +20,13 @@
     "@types/mocha": "^8.2.2",
     "@types/ramda": "^0.27.39",
     "assert": "^2.0.0",
+    "autoprefixer": "^10.4.13",
     "chai": "^4.3.4",
+    "flowbite": "^1.6.3",
+    "flowbite-react": "^0.3.7",
     "history": "^5.0.0",
     "path-to-regexp": "^6.2.0",
+    "postcss": "^8.4.21",
     "query-string": "^7.0.0",
     "ramda": "^0.27.1",
     "react": "^17.0.0",
@@ -31,7 +35,8 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "reselect-map": "^1.0.6"
+    "reselect-map": "^1.0.6",
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",

@@ -5,7 +5,7 @@ import Home from "./Home";
 import LoginForm from "./LoginForm";
 import { useRoutes } from "../store";
 
-import "./App.css";
+//import "./App.css";
 
 const Profile = React.lazy(() => import("./Profile"));
 const People = React.lazy(() => import("./People"));
