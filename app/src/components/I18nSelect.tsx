@@ -1,6 +1,6 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
-import { Dropdown } from 'flowbite-react';
-import React, { ChangeEventHandler, FormEventHandler } from "react";
+import { Select } from 'antd';
 export const I18nSelect = () => {
 
     const { t, i18n } = useTranslation(['home', 'main']);
@@ -11,10 +11,10 @@ export const I18nSelect = () => {
         i18n.changeLanguage(language); //change the language
     }
 
-    const handleChange: ChangeEventHandler<HTMLButtonElement> = (event) => {
-        console.log('asdfd',event);
-      };
-    
+    const handleChange = (value: string) => {
+        i18n.changeLanguage(value)
+    };
+      
     
 
     return(
@@ -24,7 +24,7 @@ export const I18nSelect = () => {
         <option value="es" >Spanish</option>
         <option value="fr" >French</option>
         </select> */}
-        <Dropdown
+        {/* <Dropdown
             label="Small dropdown"
             size="sm"
             onChange={handleChange}
@@ -38,7 +38,19 @@ export const I18nSelect = () => {
             <Dropdown.Item value="fr">
             French
             </Dropdown.Item>
-        </Dropdown>
+        </Dropdown> */}
+
+            <Select
+            defaultValue="en"
+            style={{ width: 120 }}
+            onChange={handleChange}
+            options={[
+                { value: 'en', label: 'English' },
+                { value: 'es', label: 'Spanish' },
+                { value: 'fr', label: 'French' },
+            ]}
+            />
+            
         </div>
     );
 }
