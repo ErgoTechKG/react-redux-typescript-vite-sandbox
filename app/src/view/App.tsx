@@ -6,7 +6,7 @@ import LoginForm from "./LoginForm";
 import { useRoutes } from "../store";
 
 //import "./App.css";
-
+import {I18nSelect} from "../components/I18nSelect";
 const Profile = React.lazy(() => import("./Profile"));
 const People = React.lazy(() => import("./People"));
 
@@ -23,6 +23,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
+         <I18nSelect /> 
         <Suspense fallback={<Loading />}>{routeResult}</Suspense>
       </header>
     </div>
